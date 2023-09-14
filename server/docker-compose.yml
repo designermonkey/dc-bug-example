@@ -1,0 +1,11 @@
+---
+services:
+  server:
+    build:
+      args:
+        php_version: ${PHP_VERSION}
+      target: prd
+    env_file:
+      - .env
+    ports:
+      - ${SWOOLE_PORT}:${SWOOLE_PORT}
